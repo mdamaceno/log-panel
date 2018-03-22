@@ -17,8 +17,8 @@ let setResponse = {
   }
 }
 
-app.get('/', (req, res) => {
-  collection('errorslog')
+app.get('/logs', (req, res) => {
+  collection('logs')
     .then(result => setResponse.ok(res, result))
     .catch(err => setResponse.error(res, err));
 });
